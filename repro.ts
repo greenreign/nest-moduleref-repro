@@ -45,7 +45,9 @@ class TestFixtures {
     }
     public test(): void {
         this.service2.test(); // ok
-        this.service1.test(); // TypeError: Cannot read property 'test' of undefined.  Service2 is not injected into Service1
+        this.service1.test(); // TypeError: Cannot read property 'test' of undefined.  
+                              // Service1 is found however the instance does not have it's dependencies injected.  
+                              // In this case Service2 is missing
     }
 }
 
